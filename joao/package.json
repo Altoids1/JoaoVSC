@@ -1,0 +1,25 @@
+{
+  "name": "joao",
+  "displayName": "Joao",
+  "description": "A simple syntax highlighter for the Joao programming language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "joao",
+      "aliases": ["Joao", "joao"],
+      "extensions": [".jao",".joao"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "joao",
+      "scopeName": "source.joao",
+      "path": "./syntaxes/joao.tmLanguage.json"
+    }]
+  }
+}

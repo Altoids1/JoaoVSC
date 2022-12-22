@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Joao",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control.joao",
+				"match": "\\b(?:if|while|for|return|throw|elseif|else)\\b"
+			},
+			{
+				"name": "keyword.other.typeguard.joao",
+				"match": "(?:Number|Object|String|Value)"
+			},
+			{
+				"name" : "constant.boolean.joao",
+				"match": "(?:true)|(?:false)"
+			}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.joao",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.joao",
+					"match": "\\\\."
+				}
+			]
+		},
+		"identifiers": {
+			"name" : "entity.name.class.directory.joao",
+			"match": "(?:\\/\\w+)+"
+		},
+		"numbers": {
+			"name" : "constant.numeric",
+			"match": "\\d(?:.\\d+)?"
+		},
+		"comments": {
+			"name" : "comment.line.joao",
+			"match": "(?<!#)##[^#].*"
+		}
+	},
+	"scopeName": "source.joao"
+}
