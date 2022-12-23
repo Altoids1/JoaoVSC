@@ -23,7 +23,7 @@
 			"patterns": [
 			{
 				"name": "keyword.control.joao",
-				"match": "\\b(?:if|while|for|return|throw|elseif|else)\\b"
+				"match": "\\b(?:if|while|for|return|throw|elseif|else|const)\\b"
 			},
 			{
 				"name": "keyword.other.typeguard.joao",
@@ -56,7 +56,18 @@
 		},
 		"comments": {
 			"name" : "comment.line.joao",
-			"match": "(?<!#)##[^#].*"
+			"begin": "(?<!#)##(?=[^#])",
+			"end": "\n\r?",
+			"patterns": [
+				{
+					"name": "keyword.todo.joao",
+					"match": "TODO"
+				},
+				{
+					"name": "keyword.fixme.joao",
+					"match": "FIXME"
+				}
+			]
 		}
 	},
 	"scopeName": "source.joao"
